@@ -14,5 +14,8 @@ jobs:
       - name: Check JDK & MVN
         run: |
            java -version
-           mvn -v            
+           mvn -v     
+      - name: App build
+        run: |
+           mvn compile package        
          
