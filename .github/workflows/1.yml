@@ -1,0 +1,18 @@
+name: Cache
+on: workflow_dispatch
+jobs:
+  jobx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v6
+      - name: Set JDK & Maven
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+      - name: Check JDK & MVN
+        run: |
+           java -version
+           mvn -v            
+         
